@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { isArray, getIndent, getType } from './utils.js';
-import Tree from './tree.js';
+import React, { useState } from 'react'
+import { isArray, getIndent } from './utils.js'
+import Tree from './tree.js'
+
 export default function ComplexTree(props) {
   let {
     name,
@@ -13,9 +14,9 @@ export default function ComplexTree(props) {
     lineType,
     lastLineType,
     lastLine = null
-  } = props;
+  } = props
 
-  let [visiable, setVisiable] = useState(true);
+  let [visiable, setVisiable] = useState(Boolean(props.visible))
 
   return (
     <div className="c-json-line">
@@ -55,5 +56,5 @@ export default function ComplexTree(props) {
         </p>
       </div>
     </div>
-  );
+  )
 }
